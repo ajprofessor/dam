@@ -7,6 +7,13 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="nombre"/>
+                    <field name="apellidos"/>
+                    <field name="dni"/>
+                    <field name="nre"/>
+                    <field name="expediente"/>
+                    <field name="fechaNacimiento"/>
+                    <field name="telefono"/>
+                    <field name="email"/>
                 </tree>
             </field>
         </record>
@@ -17,6 +24,10 @@
             <field name="arch" type="xml">
                 <search>
                     <field name="nombre"/>
+                    <field name="apellidos"/>
+                    <field name="dni"/>
+                    <field name="nre"/>
+                    <field name="expediente"/>
                 </search>
             </field>
         </record>
@@ -29,6 +40,13 @@
                     <sheet>
                         <group>
                             <field name="nombre"/>
+                            <field name="apellidos"/>
+                            <field name="dni"/>
+                            <field name="nre"/>
+                            <field name="expediente"/>
+                            <field name="fechaNacimiento"/>
+                            <field name="telefono"/>
+                            <field name="email"/>
                             <field name="asignaturas">
                                 <tree>
                                     <field name="nombre"/>

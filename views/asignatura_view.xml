@@ -7,6 +7,9 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="nombre"/>
+                    <field name="codigo"/>
+                    <field name="numAlumnos"/>
+                    <field name="fechaExamenOrdinaria"/>
                     <field name="profesor"/>
                 </tree>
             </field>
@@ -18,6 +21,7 @@
             <field name="arch" type="xml">
                 <search>
                     <field name="nombre"/>
+                    <field name="codigo"/>
                 </search>
             </field>
         </record>
@@ -30,6 +34,8 @@
                     <sheet>
                         <group>
                             <field name="nombre"/>
+                            <field name="codigo"/>
+                            <field name="fechaExamenOrdinaria"/>
                             <field name="profesor"/>
                             <field name="alumnos">
                                 <tree>
@@ -42,10 +48,21 @@
             </field>
         </record>
 
+        <record model="ir.ui.view" id="asignatura_calendar_view">
+            <field name="name">asignatura.calendar</field>
+            <field name="model">dam.asignatura</field>
+            <field name="arch" type="xml">
+                <calendar string="Calendario de exámen" date_start="fechaExamenOrdinaria" date_stop="fechaExamenOrdinaria">
+                    <field name="fechaExamenOrdinaria"/>
+                    <field name="profesor"/>
+                </calendar>
+            </field>
+        </record>
+
         <record model="ir.actions.act_window" id="dam.asignatura_action_window">
             <field name="name">Listado</field>
             <field name="res_model">dam.asignatura</field>
-            <field name="view_mode">tree,form,search</field>
+            <field name="view_mode">tree,form,search,calendar</field>
         </record>
 
         <menuitem name="Asignaturas" id="dam.asignatura_menu" parent="dam.menu_root" action="dam.asignatura_action_window"/>
