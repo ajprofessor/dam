@@ -29,6 +29,12 @@
                     <sheet>
                         <group>
                             <field name="nombre"/>
+                            <field name="asignaturas">
+                                <tree>
+                                    <field name="nombre"/>
+                                    <field name="profesor"/>
+                                </tree>
+                            </field>
                         </group>
                     </sheet>
                 </form>

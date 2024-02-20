@@ -8,3 +8,5 @@ class Profesor(models.Model):
     _rec_name = 'nombre'
 
     nombre = fields.Char(required=True)
+
+    asignaturas = fields.One2many('dam.asignatura', 'profesor')

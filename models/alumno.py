@@ -8,3 +8,5 @@ class Alumno(models.Model):
     _rec_name = 'nombre'
 
     nombre = fields.Char(required=True)
+
+    asignaturas = fields.Many2many('dam.asignatura')

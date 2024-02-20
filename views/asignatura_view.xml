@@ -7,6 +7,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="nombre"/>
+                    <field name="profesor"/>
                 </tree>
             </field>
         </record>
@@ -29,6 +30,12 @@
                     <sheet>
                         <group>
                             <field name="nombre"/>
+                            <field name="profesor"/>
+                            <field name="alumnos">
+                                <tree>
+                                    <field name="nombre"/>
+                                </tree>
+                            </field>
                         </group>
                     </sheet>
                 </form>
