@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="alumno_tree_view">
+            <field name="name">alumno.tree</field>
+            <field name="model">dam.alumno</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="alumno_search_view">
+            <field name="name">alumno.search</field>
+            <field name="model">dam.alumno</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombre"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="alumno_form_view">
+            <field name="name">alumno.form</field>
+            <field name="model">dam.alumno</field>
+            <field name="arch" type="xml">
+                <form string="Formulario de alumno">
+                    <sheet>
+                        <group>
+                            <field name="nombre"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="dam.alumno_action_window">
+            <field name="name">Listado</field>
+            <field name="res_model">dam.alumno</field>
+            <field name="view_mode">tree,form,search</field>
+        </record>
+
+        <menuitem name="DAM" id="dam.menu_root"/>
+
+        <menuitem name="Alumnos" id="dam.alumno_menu" parent="dam.menu_root" action="dam.alumno_action_window"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,47 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="profesor_tree_view">
+            <field name="name">profesor.tree</field>
+            <field name="model">dam.profesor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="profesor_search_view">
+            <field name="name">profesor.search</field>
+            <field name="model">dam.profesor</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombre"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="profesor_form_view">
+            <field name="name">profesor.form</field>
+            <field name="model">dam.profesor</field>
+            <field name="arch" type="xml">
+                <form string="Formulario de profesor">
+                    <sheet>
+                        <group>
+                            <field name="nombre"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="dam.profesor_action_window">
+            <field name="name">Listado</field>
+            <field name="res_model">dam.profesor</field>
+            <field name="view_mode">tree,form,search</field>
+        </record>
+
+        <menuitem name="Profesores" id="dam.profesor_menu" parent="dam.menu_root" action="dam.profesor_action_window"/>
+
+    </data>
+</odoo>
