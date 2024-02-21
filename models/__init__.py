@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import alumno, asignatura, profesor
+from . import alumno, asignatura, profesor, curso

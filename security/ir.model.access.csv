@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 dam.access_dam_alumno,access_dam_alumno,dam.model_dam_alumno,base.group_user,1,1,1,1
 dam.access_dam_asignatura,access_dam_asignatura,dam.model_dam_asignatura,base.group_user,1,1,1,1
 dam.access_dam_profesor,access_dam_profesor,dam.model_dam_profesor,base.group_user,1,1,1,1
+dam.access_dam_curso,access_dam_curso,dam.model_dam_curso,base.group_user,1,1,1,1

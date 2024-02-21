@@ -15,6 +15,7 @@ class Asignatura(models.Model):
 
     profesor = fields.Many2one('dam.profesor', ondelete='set null')
     alumnos = fields.Many2many('dam.alumno')
+    curso = fields.Many2one('dam.curso', ondelete='set null')
 
     @api.onchange('codigo')
     def _comprobar_codigo(self):

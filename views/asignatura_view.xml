@@ -10,6 +10,7 @@
                     <field name="codigo"/>
                     <field name="numAlumnos"/>
                     <field name="fechaExamenOrdinaria"/>
+                    <field name="curso"/>
                     <field name="profesor"/>
                 </tree>
             </field>
@@ -36,6 +37,7 @@
                             <field name="nombre"/>
                             <field name="codigo"/>
                             <field name="fechaExamenOrdinaria"/>
+                            <field name="curso"/>
                             <field name="profesor"/>
                             <field name="alumnos">
                                 <tree>

@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="curso_tree_view">
+            <field name="name">curso.tree</field>
+            <field name="model">dam.curso</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="delegado"/>
+                    <field name="tutor"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="curso_search_view">
+            <field name="name">curso.search</field>
+            <field name="model">dam.curso</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombre"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="curso_form_view">
+            <field name="name">curso.form</field>
+            <field name="model">dam.curso</field>
+            <field name="arch" type="xml">
+                <form string="Formulario de curso">
+                    <sheet>
+                        <group>
+                            <field name="nombre"/>
+                            <field name="delegado"/>
+                            <field name="tutor"/>
+                            <field name="asignaturas">
+                                <tree>
+                                    <field name="nombre"/>
+                                    <field name="codigo"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="dam.curso_action_window">
+            <field name="name">Listado</field>
+            <field name="res_model">dam.curso</field>
+            <field name="view_mode">tree,form,search</field>
+        </record>
+
+        <menuitem name="Cursos" id="dam.curso_menu" parent="dam.menu_root" action="dam.curso_action_window"/>
+
+    </data>
+</odoo>

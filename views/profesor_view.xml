@@ -42,6 +42,11 @@
                                     <field name="nombre"/>
                                 </tree>
                             </field>
+                            <field name="tutorias">
+                                <tree>
+                                    <field name="nombre"/>
+                                </tree>
+                            </field>
                         </group>
                     </sheet>
                 </form>

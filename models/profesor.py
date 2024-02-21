@@ -15,6 +15,7 @@ class Profesor(models.Model):
     email = fields.Char(string='@')
 
     asignaturas = fields.One2many('dam.asignatura', 'profesor')
+    tutorias = fields.One2many('dam.curso', 'tutor')
 
     @api.constrains('dni')
     def _comprobar_dni(self):
