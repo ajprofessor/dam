@@ -20,6 +20,8 @@ class Asignatura(models.Model):
     @api.onchange('codigo')
     def _comprobar_codigo(self):
         for r in self:
+            if not r.codigo:
+                continue
             if len(r.codigo) != 6:
                 return {
                     'warning': {

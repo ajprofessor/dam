@@ -26,4 +26,7 @@ class Profesor(models.Model):
     @api.depends('nombre', 'apellidos')
     def _obtener_nombreCompleto(self):
         for r in self:
-            r.nombreCompleto = r.nombre + ('' if r.apellidos is False else (' ' + r.apellidos))
+            if not r.nombre:
+                r.nombreCompleto = ''
+            else:
+                r.nombreCompleto = r.nombre + ('' if r.apellidos is False else (' ' + r.apellidos))
